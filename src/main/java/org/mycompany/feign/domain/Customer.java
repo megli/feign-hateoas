@@ -2,8 +2,6 @@ package org.mycompany.feign.domain;
 
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,8 +20,7 @@ public class Customer {
 	private Type type;
 	
 	// FIXME: mapping of _embedded relations not working yet
-	// current annotation sets the whole JSON string on the relations property
-	@JsonProperty("_embedded")
+	// @JsonProperty("_embedded") - this annotation sets the whole _embedded JSON on the relations property
 	private Set<Relation> relations;
 	
 }

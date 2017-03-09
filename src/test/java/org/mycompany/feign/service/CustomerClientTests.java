@@ -51,10 +51,10 @@ public class CustomerClientTests {
 		assertThat(customer.getRating().equals(6));
 		assertThat(customer.getType().equals(Type.PERSON));
 		
-		// TODO: Get the _embedded relations mapped to customer's Relation objects
+		// FIXME: _embedded relations are not being mapped to customer's Relation objects
 		assertThat(customer.getRelations()).isNotNull();
 		assertThat(customer.getRelations()).hasSize(1);
-		// TODO: assertions that the relation has been properly mapped (i.e. use its properties)
+		// TODO: assertions that the relation itself has been properly mapped (by using its properties)
 	}
 
 	/**
