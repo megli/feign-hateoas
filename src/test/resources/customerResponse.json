@@ -1,0 +1,74 @@
+{
+  "creationDate" : null,
+  "modificationDate" : null,
+  "deletionDate" : null,
+  "createdBy" : null,
+  "modifiedBy" : null,
+  "deletedBy" : null,
+  "terminationDate" : null,
+  "openingDate" : null,
+  "rating" : 6,
+  "type" : "PERSON",
+  "displayName" : "John Doe",
+  "id" : 400,
+  "_embedded" : {
+    "relations" : [ {
+      "id" : 500,
+      "type" : "CUSTOMER",
+      "from" : {
+        "id" : 101,
+        "displayName" : "John Doe",
+        "_links" : {
+          "self" : {
+            "href" : "http://localhost:8080/customer/api/persons/101{?projection}",
+            "templated" : true
+          }
+        }
+      },
+      "bidirectional" : false,
+      "startDate" : null,
+      "endDate" : null,
+      "to" : {
+        "id" : 100,
+        "displayName" : "MyCompany",
+        "_links" : {
+          "self" : {
+            "href" : "http://localhost:8080/customer/api/institutions/100{?projection}",
+            "templated" : true
+          }
+        }
+      },
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/customer/api/relations/500{?projection}",
+          "templated" : true
+        },
+        "ads:from" : {
+          "href" : "http://localhost:8080/customer/api/relations/500/from"
+        },
+        "ads:to" : {
+          "href" : "http://localhost:8080/customer/api/relations/500/to"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/customer/api/customers/400"
+    },
+    "ads:customer" : {
+      "href" : "http://localhost:8080/customer/api/customers/400"
+    },
+    "ads:consultations" : {
+      "href" : "http://localhost:8080/customer/api/customers/400/consultations"
+    },
+    "ads:relations" : {
+      "href" : "http://localhost:8080/customer/api/customers/400/relations"
+    },
+    "curies" : [ {
+      "href" : "http://www.kwsoft.ch/advisory/rels/{rel}",
+      "name" : "ads",
+      "templated" : true
+    } ]
+  }
+}
