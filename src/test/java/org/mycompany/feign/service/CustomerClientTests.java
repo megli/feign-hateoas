@@ -27,7 +27,7 @@ import feign.Logger;
 
 /**
  * Tests for the {@link CustomerClient} Feign client.
- * Provides a minimal test-specific configuration including a controller exposing a static JSON of a sample customer ("mocked API").
+ * Provides a minimal test-specific configuration including a controller used to access a static JSON of a sample customer.
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { CustomerClientTests.TestConfiguration.class }, webEnvironment = WebEnvironment.DEFINED_PORT)
@@ -51,10 +51,10 @@ public class CustomerClientTests {
 		assertThat(customer.getRating().equals(6));
 		assertThat(customer.getType().equals(Type.PERSON));
 		
-		// TODO: Get the _embedded relations mapped to customer's Relation objects and earn a huge box of cookies
+		// TODO: Get the _embedded relations mapped to customer's Relation objects
 		assertThat(customer.getRelations()).isNotNull();
 		assertThat(customer.getRelations()).hasSize(1);
-		
+		// TODO: assertions that the relation has been properly mapped (i.e. use its properties)
 	}
 
 	/**
